@@ -1,17 +1,15 @@
 package service;
 
 import entity.TestUser;
+import lombok.RequiredArgsConstructor;
 import repository.TestRepository;
 
 import java.util.List;
 
+@RequiredArgsConstructor
 public class TestService {
 
     private final TestRepository testRepository;
-
-    public TestService(TestRepository testRepository){
-        this.testRepository = testRepository;
-    }
 
     public TestUser save(TestUser user){
         return testRepository.save(user);
