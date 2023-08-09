@@ -31,6 +31,9 @@ public class Main {
         List<TestUser> userList = testService.findAll();
         System.out.println(userList.toString());
 
+        List<TestUser> userListByName = testService.findByName("박완규");
+        System.out.println(userListByName.toString());
+
         testService.deleteById(newUser.getId());
         List<TestUser> userListAfterDelete = testService.findAll();
         System.out.println(userListAfterDelete.toString());
