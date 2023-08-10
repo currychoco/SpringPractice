@@ -26,6 +26,7 @@ public class Main {
         System.out.println(userById.toString());
 
         TestUser user2 = new TestUser(null, "박완규", LocalDate.parse("1999-07-22", DateTimeFormatter.ofPattern("yyyy-MM-dd")), UserGender.MALE);
+        TestUser user3 = new TestUser(null, "김첨지", LocalDate.parse("1979-02-28", DateTimeFormatter.ofPattern("yyyy-MM-dd")), UserGender.MALE);
         testService.save(user2);
 
         List<TestUser> userList = testService.findAll();
@@ -34,5 +35,6 @@ public class Main {
         testService.deleteById(newUser.getId());
         List<TestUser> userListAfterDelete = testService.findAll();
         System.out.println(userListAfterDelete.toString());
+
     }
 }
