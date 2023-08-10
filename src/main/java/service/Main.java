@@ -28,6 +28,9 @@ public class Main {
         TestUser user2 = new TestUser(null, "박완규", LocalDate.parse("1999-07-22", DateTimeFormatter.ofPattern("yyyy-MM-dd")), UserGender.MALE);
         testService.save(user2);
 
+        TestUser user3 = new TestUser(null, "김첨지", LocalDate.parse("1785-10-01", DateTimeFormatter.ofPattern("yyyy-MM-dd")), UserGender.MALE);
+        testService.save(user3);
+
         List<TestUser> userList = testService.findAll();
         System.out.println(userList.toString());
 
