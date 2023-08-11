@@ -30,9 +30,6 @@ public class Main {
         System.out.println(testService.save(user3).toString());
         testService.save(user2);
 
-        TestUser user3 = new TestUser(null, "김첨지", LocalDate.parse("1785-10-01", DateTimeFormatter.ofPattern("yyyy-MM-dd")), UserGender.MALE);
-        testService.save(user3);
-
         List<TestUser> userList = testService.findAll();
         System.out.println(userList.toString());
 
