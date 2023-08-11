@@ -30,8 +30,14 @@ public class Main {
         System.out.println(testService.save(user3).toString());
         testService.save(user2);
 
+        TestUser user3 = new TestUser(null, "김첨지", LocalDate.parse("1785-10-01", DateTimeFormatter.ofPattern("yyyy-MM-dd")), UserGender.MALE);
+        testService.save(user3);
+
         List<TestUser> userList = testService.findAll();
         System.out.println(userList.toString());
+
+        List<TestUser> userListByName = testService.findByName("박완규");
+        System.out.println(userListByName.toString());
 
         testService.deleteById(newUser.getId());
         List<TestUser> userListAfterDelete = testService.findAll();
