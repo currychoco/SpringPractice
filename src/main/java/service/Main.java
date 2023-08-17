@@ -19,6 +19,7 @@ public class Main {
 
         TestService testService = ac.getBean(TestService.class);
 
+
         TestUser newUser = testService.save(user1);
         System.out.println(newUser.toString());
 
